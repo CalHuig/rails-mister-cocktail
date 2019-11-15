@@ -1,5 +1,8 @@
+<div class="cocktail-image">
+  <h2> <%= @cocktail.name %> </h2>
+</div>
+
 <div class="container m-5">
-<h2> <%= @cocktail.name %> </h2>
 <ul>
 <% @doses.each do |dose| %>
   <li><%= "#{dose.ingredient.name} - #{dose.description}"%></li>
@@ -9,5 +12,18 @@
 <% end %>
 </ul>
 <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
-<p><%= link_to "Back to cocktail list", cocktails_path %></p>
+<p><%= link_to "Back to cocktail list", cocktails_path, class: "btn btn-success" %></p>
+</div>
+
+<div class="footer fixed-bottom">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    Drinking is bad. Be careful. Don't embarass yourself.
+  </div>
 </div>

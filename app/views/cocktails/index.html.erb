@@ -1,13 +1,35 @@
-<div class="third-banner-one" >
+<div class="banner">
   <div class="container">
-    <h1><i>WASTED</i></h1>
+    <h1>WASTED</h1>
     <h3>The smallest online library of cocktail recipes</h3>
+    <div>
+    <a class="btn-ghosty" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Browse existing cocktails
+    </a>
+    </div>
+    <p>OR</p>
+    <p><%= link_to "Share your cocktail", new_cocktail_path, class: "btn-ghosty" %></p>
+
+
+  </div>
+</div>
+<div class="collapse" id="collapseExample">
+  <div class = "cards-new">
+    <% @cocktails.each do |cocktail| %>
+      <h3><%= link_to "#{cocktail.name}", cocktail_path(cocktail.id), class: "card-new" %></h3>
+    <% end %>
   </div>
 </div>
 
-
-<div class = "cards-new">
-  <% @cocktails.each do |cocktail| %>
-    <h3><%= link_to "#{cocktail.name}", cocktail_path(cocktail.id), class: "card-new" %></h3>
-  <% end %>
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    Drinking is bad. Be careful. Don't embarass yourself.
+  </div>
 </div>
