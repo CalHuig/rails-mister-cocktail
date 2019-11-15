@@ -1,0 +1,28 @@
+.third-banner-one h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 70px;
+  font-weight: bold;
+  font-family: 'Permanent Marker', cursive;
+  letter-spacing: 20px;
+}
+
+.third-banner-one h3 {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-family: 'Poiret One', cursive;
+  font-weight: 800px;
+}
+
+.third-banner-one{
+  padding: 40px;
+  background-image: url("https://images.pexels.com/photos/265704/pexels-photo-265704.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"), linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));
+  background-size: cover;
+  background-position: 0px 570px;
+  display: flex;
+  flex-direction: row;
+  height: 66.66vh;
+}

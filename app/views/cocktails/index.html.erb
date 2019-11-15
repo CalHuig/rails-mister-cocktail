@@ -1,0 +1,13 @@
+<div class="third-banner-one" >
+  <div class="container">
+    <h1><i>WASTED</i></h1>
+    <h3>The smallest online library of cocktail recipes</h3>
+  </div>
+</div>
+
+
+<div class = "cards-new">
+  <% @cocktails.each do |cocktail| %>
+    <h3><%= link_to "#{cocktail.name}", cocktail_path(cocktail.id), class: "card-new" %></h3>
+  <% end %>
+</div>
