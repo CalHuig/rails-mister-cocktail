@@ -1,5 +1,5 @@
-<div class="cocktail-image">
-  <h2> <%= @cocktail.name %> </h2>
+<div class="cocktail-banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @cocktail.photo.key, height: 300, width: 400, crop: :fill %>')">
+  <h1><%= @cocktail.name %></h1>
 </div>
 
 <div class="container m-5">
@@ -11,8 +11,9 @@
       data: { confirm: "Are you sure?" } %>
 <% end %>
 </ul>
-<%= link_to "Add a dose", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
-<p><%= link_to "Back to cocktail list", cocktails_path, class: "btn btn-success" %></p>
+<%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
+<%= link_to "Back to list", cocktails_path, class: "btn btn-success" %>
+<%= link_to "Delete", cocktail_path(@cocktail), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-info' %>
 </div>
 
 <div class="footer fixed-bottom">
